@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  #hed1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  body {
+    background-image: url('/static/home2.jpeg');
+    background-color: rgba(202, 192, 192, 0.877);
+    background-position: center;
+    
+    background-size: cover;
+  }
+  section{
+    /* opacity: 0.5; */
+  }
+  #last{
+    margin-left: 4px;
+  }
+  #form:hover{
+    opacity: 1;
+  }
+
+  #popup {
+    display: none;
+  }
+
+  #pop2 {
+    display: none;
+  }
+
+  #ramp {
+    display: none;
+  }
+  #form{
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px 00px; */
+    padding: 50px 0;
+    width: 400px;
+    margin-left: 400px;
+    border-radius: 25px;
+    /* width: 500px; */
+    opacity: 0.9;
+    width: 700px;
+    background-color: rgba(245, 241, 227, 0.877);
+    border: 2px solid black;
+  }
+  .inp{
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  button{
+    cursor: pointer;
+  }
+  a{
+    cursor: pointer;
+  }
+  img{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+header{
+    height: 90px;
+    
+}
+.help{
+  /* margin: ; */
+}
+</style>
+<link rel="stylesheet" href="/template/style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Register Here</title>
+</head>
+
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg> -->
+        <img src="/static/logo1.jpeg" alt="">
+        <span class="ml-3 text-xl">Chetna</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
+        <a class="mr-5 hover:text-gray-900" href="register.html">Register</a>
+        <a class="mr-5 hover:text-gray-900" href="search.html">Search Places</a>
+        <a class="mr-5 hover:text-gray-900"href="contact.html">Contact Us</a>
+      </nav>
+     <a href="index.html"> <span class="iconify-inline w-20 h-10" data-icon="fa-solid:home"></span></a>
+    </div>
+  </header>
+  <hr>
+  <section>
+    
+<div class="content-center mt-20 " id="form">
+  <div>
+    <h1 id="hed1" class="mt-20">Registration For Owner</h1>
+  </div>
+    <form action="/submit" method="POST">
+      <div class="mx-40 my-auto">
+        <div class="relative mb-4">
+          <label for="email" class="leading-7 text-sm font-bold text-2x1 text-black">Name :</label><br>
+          <input type="text" id="first" class="rounded-sm w-44  h-8 px-2 inp border-black" name="email" placeholder="First Name"
+            class="w-1/3  bg-white rounded border inp border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"><input
+            type="text" id="email" name="email"class="rounded-sm w-48 h-8 inp px-2" placeholder="Last Name"
+            class="w-1/3 bg-white rounded  border border-gray-300 focus:border-indigo-500 ml-4 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ml-2" id="last"><br>
+          <div class="my-4">
+            <label for="typ" class="leading-7 text-sm font-bold text-2x1 my-4 text-black">Property Type : </label>
+            <select name="prop" class="inp" id="typ">
+              <option value="hotel">Select</option>
+              <option value="hotel">Hotel</option>
+              <option value="coll">College</option>
+              <option value="Off">Office</option>
+              <option value="soc">Society</option>
+              <option value="hos">Hospital</option>
+              <option value="shop">Shopping Complex</option>
+              <option value="mall">Mall</option>
+            </select>
+          </div>
+          <div class=""><label class=" leading-7 text-sm font-bold" for="mobile">Contact No.</label>
+            <div ><input type="number" min="1" max="9999999999"  class="w-96 px-2 my-2 inp rounded-sm rounded-sm h-8 " placeholder="Phone number" id="mobile"></div>
+          </div>
+          <label for="email" class="leading-7 text-sm font-bold text-2x1 text-black">Email :</label><br>
+          <div ><input type="text" class="w-96 px-2 my-2 inp rounded-sm rounded-sm h-8 " placeholder="Email" id="mobile"></div>
+        </div>
+        <div class="relative mb-4">
+          <!-- <label for="message" class="leading-7 text-sm text-gray-600"></label>
+         Gender :    Male <input name="Gender" type="radio">    Female <input name="Gender" type="radio">    Other <input name="Gender" type="radio"> -->
+          <!-- <label for="email" class="leading-7 text-sm font-bold text-2x1 text-black">Service Available :</label><br>
+         <input type="text" id="email" name="email" placeholder="Enter Here" class="w-1/2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div>
+        <label for="image" class="leading-7 text-sm font-bold text-2x1 text-black">Upload Image :</label>
+        <input class="file-upload-input" type="file" onchange="readURL(this)" accept="Image/">
+          </div>
+          <br>
+          <div>
+            <label for="email" class="leading-7 text-sm font-bold text-2x1 text-black">Upload Video : </label>
+            <input class="file-upload-input" type="file" onchange="readURL(this)" accept="Video/mp4">
+              </div><br>
+          <div> -->
+
+          <label for="loc" class="leading-7 text-sm font-bold text-2x1 text-black">Address :</label><br>
+          <div ><input type="text" class="w-96 px-2 my-2 inp rounded-sm rounded-sm h-8 " placeholder="Address" id="mobile"></div>
+          <div ><input type="number" min="1" max="999999" class="w-96 px-2 my-2 inp rounded-sm rounded-sm h-8 " placeholder="Pincode" id="mobile"></div>
+          <!-- <input type="text" placeholder="Line 3"  id="email" name="email" class="w-1/2 my-4 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> -->
+        </div>
+      </div>
+      <div><button class="br-10 my-3 mb-5 mx-40 py-2 rounded-full px-3 font-bold rounded-5x1 inp border-2"><i
+            class="material-icons mx-2 " style="font-size:20px">my_location</i>Use Current Location</button></div>
+      <div class="mx-40 font-bold">
+        <h2>Is your property is accessible for specially abled people ?</h2>
+        <a class="border-2 px-4 py-1 my-2 mx-2 rounded-full text-base text-sm inp " id="btn" onclick="show()">Yes</a> <Button type="reset"
+          class="border-2 px-4 py-1 my-2 mx-2 rounded-full inp" onclick="alrt()">No</Button>
+      </div>
+
+
+   <!-- <div><a class="border-2 rounded-sm mx-40 border-black" href="https://youtu.be/Ax-CpgAbVLM">Click here for help</a></div> -->
+   
+
+      <div id="popup">
+        <div class="border-2 w-1/4 px-4 mx-40 border-black py-2 inp help mt-4 rounded-full mb-4 my-4" ><a href="https://youtu.be/Ax-CpgAbVLM" target="_blank">Click here for help</a></div>
+        <form action="backend.js">
+          <div class="mx-40 font-bold">
+            <h2>Provide facility of Lift?</h2>
+            <a class="border-2 px-4 py-1 my-2 mx-2 rounded-full" onclick="lift()">Yes</a> <Button
+              class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+          </div>
+          <!-- <div id="pop2"> -->
+       
+            <label class="mx-40 mt-4" for="lift">How many number of lifts do you have ?</label><br>
+            <input type="number" class="mx-40 w-1/4 rounded-sm h-8 mt-2" name="" id="lift">
+            <div class="mx-40 my-4">
+              <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+              <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+            </div>
+            <div class="mx-40 my-4">
+              <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video : </label>
+              <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+            </div>
+          
+  
+  
+          <div class="mx-40 font-bold">
+            <h2>Provide provisions of ramps?</h2>
+            <a class="border-2 px-4 py-1 my-2 mx-2 rounded-full">Yes</a> <Button
+              class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+          </div>
+          <div id="ramp">
+          
+              <div class="mx-40 my-4">
+                <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+                <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+              </div>
+              <div class="mx-40 my-4">
+                <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video : </label>
+                <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+              </div>
+            
+          </div>
+          <div>
+  
+            <div class="mx-40 font-bold">
+              <h2>Provide handrails ?</h2>
+              <button class="border-2 px-4 py-1 my-2 mx-2 rounded-full">Yes</button> <Button
+                class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+            </div>
+         
+              <div class="mx-40 my-4">
+                <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+                <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+              </div>
+              <div class="mx-40 my-4">
+                <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video : </label>
+                <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+              </div>
+          
+            <div>
+  
+              <div class="mx-40 font-bold">
+                <h2>Does have accessible toilets ?</h2>
+                <button class="border-2 px-4 py-1 my-2 mx-2 rounded-full">Yes</button> <Button
+                  class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+              </div>
+             
+                <div class="mx-40 my-4">
+                  <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+                  <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+                </div>
+                <div class="mx-40 my-4">
+                  <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video : </label>
+                  <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+                </div>
+              
+            
+                <div class="mx-40 my-4">
+                  <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+                  <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+                </div>
+                <div class="mx-40 my-4">
+                  <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video : </label>
+                  <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+                </div>
+            
+              <div>
+                <div class="mx-40 font-bold">
+                  <h2>Braille signage ?</h2>
+                  <button class="border-2 px-4 py-1 my-2 mx-2 rounded-full">Yes</button> <Button
+                    class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+                </div>
+                
+                  <div class="mx-40 my-4">
+                    <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image :</label>
+                    <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+                  </div>
+                  <div class="mx-40 my-4">
+                    <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video :
+                    </label>
+                    <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+                  </div>
+                
+                <div>
+                  <div>
+                    <div class="mx-40 font-bold">
+                      <h2>accessible counters ?</h2>
+                      <button class="border-2 px-4 py-1 my-2 mx-2 rounded-full">Yes</button> <Button
+                        class="border-2 px-4 py-1 my-2 mx-2 rounded-full">No</Button>
+                    </div>
+                   
+                      <div class="mx-40 my-4">
+                        <label for="image" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Image
+                          :</label>
+                        <input class="file-upload-input ml-8" type="file" onchange="readURL(this)" accept="Image/">
+                      </div>
+                      <div class="mx-40 my-4">
+                        <label for="email" class="leading-7 text-sm font-bold my-2 text-2x1 text-black">Upload Video :
+                        </label>
+                        <input class="file-upload-input ml-9" type="file" onchange="readURL(this)" accept="Video/mp4">
+                      </div>
+                    
+                    <div>
+       
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="mx-40 "><button class="border-2 px-4 py-1 my-2 mx-2  border-black rounded-full" type="submit">Submit Now</button> <button class="border-2 px-4 border-black py-1 my-2 mx-2 rounded-full" type="reset">Reset Now</button></div> 
+    </form>
+    </div>  
+  </section>
+  
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="/static/logo1.jpeg" alt="">
+        <span class="ml-3 text-xl">Chetna</span>
+      <!-- </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <a href="" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"></a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none"
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span> -->
+    </div>
+  </footer>
+  <script>
+    let popup = document.getElementById('popup');
+    function show() {
+      let button = document.getElementById('btn');
+      let pop = document.getElementById('popup');
+
+      popup.style.display = 'inline-block';
+
+    }
+    function lift() {
+      let lift = document.getElementById('pop2');
+      lift.style.display = 'block'
+    }
+    function ram2() {
+      let ram2 = document.getElementById('ramp');
+      ram2.style.display = 'block'
+    }
+    function alrt() {
+      alert('Your property is not eligible to be registered !');
+    }
+  </script>
+  <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+</body>
+
+</html>
